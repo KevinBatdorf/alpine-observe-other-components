@@ -14,9 +14,9 @@ Add `x-alpine-observe` attribute with the function name. Each component with thi
 <div x-data="{text:'bar'}" @click="text = 'baz'" x-text="text"></div>
 
 <!-- The component below is watching the component above for changes -->
-<div x-data="{foo:'bar', go(details) { this.foo = details.data[0].text }}" x-alpine-observe="go" x-text="foo">
+<div x-data="{foo:'bar', go(details) { this.foo = details.data[0].text }}" x-alpine-observe="go" x-text="foo"></div>
 ```
-[Demo](url)
+[Demo](https://codepen.io/KevinBatdorf/pen/c7439ba7c47cb84464cf9409e289641c)
 
 #### Watch only specific components
 Add `x-alpine-observe` attribute with an object to specify a selector. Only components with this selector will be monitored for changes. Note that changes occur on initial load so the example below will first show `1`, not `0`.
@@ -38,7 +38,7 @@ Add `x-alpine-observe` attribute with an object to specify a selector. Only comp
   x-alpine-observe="{selector: '.counters', callback: 'go'}"
   x-text="count"></div>
 ```
-[Demo](url)
+[Demo](https://codepen.io/KevinBatdorf/pen/1100d05938a0a2ed51f2e391c6b8cf68)
 
 #### Watch parent components
 Similar to above, you can scope the child to only watch the parent for changes.
@@ -53,7 +53,7 @@ Similar to above, you can scope the child to only watch the parent for changes.
   </div>
   <div>
     Nested <button 
-      x-data="{text: 'child', getDataFromParent(details) { this.text = `${details.data[0].text}` }}"
+      x-data="{ text: 'child', getDataFromParent(details) { this.text = `${details.data[0].text}` } }"
       x-alpine-observe="{selector: '#parent', callback: 'getDataFromParent'}"
       @click="text = text === 'child' ? 'also child' : 'child'">
       <span x-text="text"></span>
@@ -61,7 +61,7 @@ Similar to above, you can scope the child to only watch the parent for changes.
   </div>
 </div>
 ```
-[Demo](url)
+[Demo](https://codepen.io/KevinBatdorf/pen/1c6c57ed30a79ca26a934a702d3f6095)
 
 ## Installation
 
