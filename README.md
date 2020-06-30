@@ -1,8 +1,8 @@
-# Alpine — Observe Other Alpines
+# Alpine — Observe Other Components
 A lightweight observer function for Alpine.js that lets you monitor state on other Alpine components, including parent components.
 
-![GitHub file size in bytes](https://img.shields.io/github/size/kevinbatdorf/alpine-observe-other-alpines/dist/index.js?label=minified&style=flat-square)
-![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/kevinbatdorf/alpine-observe-other-alpines?label=version&style=flat-square)
+![GitHub file size in bytes](https://img.shields.io/github/size/kevinbatdorf/alpine-observe-other-components/dist/index.js?label=minified&style=flat-square)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/kevinbatdorf/alpine-observe-other-components?label=version&style=flat-square)
 
 ## About
 
@@ -68,7 +68,7 @@ Similar to above, you can scope the child to only watch the parent for changes.
 Include the following `<script>` tag in the `<head>` of your document (before Alpine):
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kevinbatdorf/alpine-observe-other-alpines@0.x.x/dist/index.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kevinbatdorf/alpine-observe-other-components@0.x.x/dist/index.js"></script>
 ```
 
 ### Manual
@@ -76,13 +76,13 @@ Include the following `<script>` tag in the `<head>` of your document (before Al
 If you wish to create your own bundle:
 
 ```bash
-npm install kevinbatdorf/alpine-observe-other-alpines --save
+npm install kevinbatdorf/alpine-observe-other-components --save
 ```
 
 Then add the following to your script:
 
 ```javascript
-import 'alpine-observe-other-alpines'
+import 'alpine-observe-other-components'
 import 'alpinejs'
 ```
 

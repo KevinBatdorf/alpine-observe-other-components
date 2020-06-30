@@ -1,5 +1,5 @@
 {
-  "name": "@kevinbatdorf/alpine-observe-other-alpines",
+  "name": "@kevinbatdorf/alpine-observe-other-components",
   "version": "0.1.0",
   "description": "A lightweight observer function for Alpine.js that lets you monitor state on other Alpine components",
   "main": "dist/index.js",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kevinbatdorf/alpine-observe-other-alpines.git"
+    "url": "git+https://github.com/kevinbatdorf/alpine-observe-other-components.git"
   },
   "keywords": [
     "alpinejs"
@@ -24,9 +24,9 @@
   "author": "Kevin Batdorf",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kevinbatdorf/alpine-observe-other-alpines/issues"
+    "url": "https://github.com/kevinbatdorf/alpine-observe-other-components/issues"
   },
-  "homepage": "https://github.com/kevinbatdorf/alpine-observe-other-alpines#readme",
+  "homepage": "https://github.com/kevinbatdorf/alpine-observe-other-components#readme",
   "devDependencies": {
     "alpinejs": "^2.4.1",
     "cross-env": "^7.0.2",
