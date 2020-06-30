@@ -8,9 +8,49 @@
 
 </head>
 
-<body class="flex items-center justify-center">
+<body class="flex flex-col items-center justify-center min-h-screen">
 	
-	<div x-data="{}"></div>
+	<p>This example shows how you can monitor changes from all other Alpine components and run a function with information about the changes</p>
+	<div
+		x-data="{ total: 0,
+			updateSomething(details) {
+				console.log(details) // This contains useful information
+				this.total = details.data.filter(d => d.counter).reduce((a, b) => a + b.counter, 0)
+			}
+		}"
+		x-alpine-observe="updateSomething()"
+		x-text="total"></div>
+
+	<div class="space-x-2 flex mt-6">
+		<button class="focus:outline-none border py-1 w-24 rounded shadow-sm" x-data="{counter:0}" x-text="counter" @click="counter++"></button>
+		<span>+</span>
+		<button class="focus:outline-none border py-1 w-24 rounded shadow-sm" x-data="{counter:0}" x-text="counter" @click="counter++"></button>
+	</div>
+
+	<hr class="h-2 w-full my-16">
+
+	<p>THis example shows how a child can read data from a parent. It also shows how you can use a selector to limit the scope of what you are watching</p>
+	<div 
+		id="parent" 
+		x-data="{text: 'parent'}" 
+		class="flex mt-6 flex flex-col" >
+		<div>
+			Parent: <button
+				class="mb-2 focus:outline-none border py-1 w-64 rounded shadow-sm"
+				@click="text = text === 'parent' ? 'also parent' : 'parent'"
+				x-text="text"></button>
+		</div>
+		<div>
+			Nested <button 
+				x-data="{text: 'child', getDataFromParent(details) { this.text = `${details.data[0].text}` }}"
+				class="mb-2 focus:outline-none border py-1 w-64 rounded shadow-sm"
+				x-alpine-observe="{selector: '#parent', callback: 'getDataFromParent'}"
+				@click="text = text === 'child' ? 'also child' : 'child'">
+				<span x-text="text"></span>
+		</button>
+		</div>
+	</div>
+		
 
 	<script src="http://localhost:35729/livereload.js"></script>
 </body>
