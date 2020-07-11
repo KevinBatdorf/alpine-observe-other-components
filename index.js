@@ -50,7 +50,7 @@ function AlpineObserver() {
 
 const alpine = window.deferLoadingAlpine || ((alpine) => alpine())
 window.deferLoadingAlpine = function(callback) {
-	AlpineAutoInit()
+	AlpineObserver()
 	alpine(callback)
 }
 
