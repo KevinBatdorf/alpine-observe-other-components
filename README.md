@@ -68,7 +68,7 @@ Similar to above, you can scope the child to only watch the parent for changes.
 Include the following `<script>` tag in the `<head>` of your document (before Alpine):
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kevinbatdorf/alpine-observe-other-components@0.x.x/dist/index.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kevinbatdorf/alpine-observe-other-components@latest/dist/index.js"></script>
 ```
 
 ### Manual
